@@ -1,0 +1,7 @@
+Hi {{.Name}},
+
+It looks like you have changed your email address.
+
+If that sounds right, verify your email address by clicking the following link: {{.URL}}
+
+If you have not changed your email address please contact us under support@example.com
