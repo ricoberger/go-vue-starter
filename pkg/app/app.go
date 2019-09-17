@@ -3,6 +3,7 @@ package app
 import (
 	"fmt"
 	"net/http"
+	"strings"
 
 	"github.com/ricoberger/go-vue-starter/pkg/static"
 
@@ -26,8 +27,8 @@ func New(config *Config, router *mux.Router) (*App, error) {
 		Router: router,
 	}
 
-	// Serve static assets
-	app.Router.PathPrefix("/").Handler(http.StripPrefix("/", http.FileServer(static.Dir(false, "/web/vue.js/dist"))))
+	// Static assets handler
+	staticHandler := http.StripPrefix("/", http.FileServer(static.Dir(false, "/web/vue.js/dist")))
 
 	// Serve vue app
 	vueApp, err := static.FSString(false, "/web/vue.js/dist/index.html")
@@ -36,6 +37,13 @@ func New(config *Config, router *mux.Router) (*App, error) {
 	}
 
 	app.Router.PathPrefix("/").HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		_path := r.URL.Path
+		// static files
+		if strings.Contains(_path, ".") || _path == "/" {
+			staticHandler.ServeHTTP(w, r)
+			return
+		}
+
 		fmt.Fprintf(w, vueApp)
 	})
 
