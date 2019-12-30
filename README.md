@@ -24,13 +24,14 @@ This project contains a quick starter kit for a Go project using Vue as single p
 
 ## Building and running
 
-The **Go &#9829; Vue Starter** contains a Go server which serves the single page Vue app and an API whiche handles all request from the Vue frontend. To run the Go server and Vue app as seperated process run the following commands:
+The **Go &#9829; Vue Starter** contains a Go server which serves the single page Vue app and an API whiche handles all request from the Vue frontend. To run the Go server and Vue app as separated process run the following commands:
 
 ```sh
 git clone github.com/ricoberger/go-vue-starter
+go get -u github.com/mjibson/esc
 
 # Run the Vue app on localhost:8080
-cd go-vue-starter/app
+cd go-vue-starter/web/vue.js
 
 yarn install
 yarn serve
@@ -46,9 +47,10 @@ If you want to serve the Vue frontend app within the Go server run:
 
 ```sh
 git clone github.com/ricoberger/go-vue-starter
+go get -u github.com/mjibson/esc
 
 # Build the Vue app
-cd go-vue-starter/app
+cd go-vue-starter/web/vue.js
 
 yarn install
 yarn build
