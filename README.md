@@ -6,12 +6,12 @@ This project contains a quick starter kit for a Go project using Vue as single p
 
 ## Features
 
-- [x] Go API using [Gorilla mux](github.com/gorilla/mux)
+- [x] Go API using [Gorilla mux](https://github.com/gorilla/mux)
 - [x] Go server to serve the Vue app
-- [x] [MongoDB](github.com/mongodb/mongo-go-driver) integration
-- [x] [JWT](github.com/dgrijalva/jwt-go) authentication
+- [x] [MongoDB](https://github.com/mongodb/mongo-go-driver) integration
+- [x] [JWT](https://github.com/dgrijalva/jwt-go) authentication
 - [x] Embedding Vue build into Go binary using [esc](https://github.com/mjibson/esc)
-- [x] Go server configuration via [.yml](gopkg.in/yaml.v2) file
+- [x] Go server configuration via [.yml](https://gopkg.in/yaml.v2) file
 - [x] Using Go Modules for dependency management
 - [x] Makefile based project
 - [x] Routing via [vue-router](https://github.com/vuejs/vue-router)
@@ -120,13 +120,13 @@ Usage of starter:
 
 **Go &#9829; Vue Starter** is build up on some dependencies for Go and Vue. The Go dependencies are:
 
-- [crypto - Go supplementary cryptography libraries](golang.org/x/crypto)
+- [crypto - Go supplementary cryptography libraries](https://golang.org/x/crypto)
 - [esc - A simple file embedder for Go](https://github.com/mjibson/esc)
-- [gorilla/mux - A powerful URL router and dispatcher for golang](github.com/gorilla/mux)
-- [jwt-go - Golang implementation of JSON Web Tokens (JWT)](github.com/dgrijalva/jwt-go)
-- [logrus - Structured, pluggable logging for Go](github.com/sirupsen/logrus)
-- [mongo-go-driver - The Go driver for MongoDB](github.com/mongodb/mongo-go-driver)
-- [yaml.v2 - YAML support for the Go language](gopkg.in/yaml.v2)
+- [gorilla/mux - A powerful URL router and dispatcher for golang](https://github.com/gorilla/mux)
+- [jwt-go - Golang implementation of JSON Web Tokens (JWT)](https://github.com/dgrijalva/jwt-go)
+- [logrus - Structured, pluggable logging for Go](https://github.com/sirupsen/logrus)
+- [mongo-go-driver - The Go driver for MongoDB](https://github.com/mongodb/mongo-go-driver)
+- [yaml.v2 - YAML support for the Go language](https://gopkg.in/yaml.v2)
 
 The dependencies for the Vue app are:
 
